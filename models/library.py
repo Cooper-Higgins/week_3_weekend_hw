@@ -16,4 +16,3 @@ def burn_book(book_title):
             break
 
     library.remove(book_to_burn)
-

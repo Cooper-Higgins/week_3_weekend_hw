@@ -23,6 +23,6 @@ def burn(title):
   burn_book(title)
   return redirect('/library')
 
-@app.route('/orders/<int:id>')
+@app.route('/library/<int:id>')
 def view_book(id):
     return render_template("view_book.html", title="Book Full Details", book=library[id -1])

@@ -1,14 +1,13 @@
-<head>
-    <title>Book Details</title>
-    <link href="{{ url_for('static', filename='style.css') }}" rel="stylesheet">
-</head>
+{% extends "base.html" %}
+
+{% block content %}
 <header>
-    <h1>Title: {{book.title}}</h1>
+    <h1><em>"{{book.title}}"</em></h1>
 </header>
-    <body id="book-details">
-        <p><b>Author: {{book.author}}</b></p>
-        <p><b>Genre:</b> {{ book.genre }}</p>
-        <p><b>Checked Out:</b>
+    <body>
+        <p><strong>Author:</strong> {{book.author}}</p>
+        <p><strong>Genre:</strong> {{ book.genre }}</p>
+        <p><strong>Checked Out:</strong>
         {% if book.checked_out %}
             <span> &#9989; </span>
         {% else %}
@@ -16,3 +15,4 @@
         {% endif %}
         </p>
     </body>
+{% endblock %}
